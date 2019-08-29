@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserServiceService } from './__service/user-service.service';
 import { SignupComponent } from './signup/signup.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
@@ -22,7 +23,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
