@@ -1,0 +1,30 @@
+<form #myform="ngForm" class="col-md-12 row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <label class="col-md-12 padding-zero">First Name <i class="color-red">*</i></label>
+            <input type="text" [(ngModel)]="user.first_name" name="first_name" required>
+        </div>        
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <label class="col-md-12 padding-zero">Last Name <i class="color-red">*</i></label>
+            <input type="text" [(ngModel)]="user.last_name" name="last_name" required>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <label class="col-md-12 padding-zero">Email <i class="color-red">*</i></label>
+            <input type="email" [(ngModel)]="user.email" name="email" required>
+        </div>
+        <div class="col-md-6">
+            <label class="col-md-12 padding-zero">Password <i class="color-red">*</i></label>
+            <input type="password" [(ngModel)]="user.password" name="password" required>
+        </div>
+    </div>
+    <div class="col-md-12 m-t-10px">
+        <div class="col-md-12">
+            <button type="button" (click)="userSignUp()" class="btn btn-success" [disabled]="!myform.valid">Sign Up</button>
+            <button type="button" href [routerLink]="'/login'" class="btn btn-success" style="margin-left: 10px">Login</button>
+        </div>
+    </div>
+</form>

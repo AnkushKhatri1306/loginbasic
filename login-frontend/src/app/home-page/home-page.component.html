@@ -1,0 +1,12 @@
+<div class="col-md-12 row" *ngIf="userData">
+    <h1>User details</h1>
+    <div class="col-md-12">
+        <label>Name : </label>
+        <span style="margin-left: 5px;">{{ userData.first_name + ' ' + userData.last_name }}</span>
+    </div>    
+    <div class="col-md-12">
+        <label>Email : </label>
+        <span style="margin-left: 5px;"> {{ userData.email }}</span>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="logoutUser()">Logout</button>
+</div>
